@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Add a Friend">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="300.0" layoutY="78.0" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+                           <children>
+                              <TextField fx:id="firstNameTextField" alignment="CENTER" promptText="First Name" />
+                              <TextField fx:id="lastNameTextField" alignment="CENTER" promptText="Last Name" />
+                              <TextField fx:id="ageTextField" alignment="CENTER" promptText="Age" />
+                              <TextField fx:id="phoneNumberTextField" alignment="CENTER" promptText="Phone Number" />
+                           </children>
+                        </VBox>
+                        <Button fx:id="quitButton" layoutX="507.0" layoutY="314.0" mnemonicParsing="false" onAction="#quit" text="Quit" />
+                        <Button fx:id="confirmAdd" layoutX="33.0" layoutY="314.0" mnemonicParsing="false" onAction="#confirmAdd" text="Add Friend" />
+                        <Label layoutX="230.0" layoutY="85.0" text="First Name:" />
+                        <Label layoutX="230.0" layoutY="137.0" text="Last Name:" />
+                        <Label layoutX="267.0" layoutY="195.0" text="Age:" />
+                        <Label layoutX="207.0" layoutY="251.0" text="Phone Number:" />
+                        <Label layoutX="261.0" layoutY="22.0" text="Add a Friend">
+                           <font>
+                              <Font name="Al Bayan Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Display Friends">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="displayList" layoutX="31.0" layoutY="15.0" onMouseClicked="#displayFriends" prefHeight="338.0" prefWidth="200.0" />
+                        <VBox alignment="CENTER_RIGHT" layoutX="300.0" layoutY="69.0" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+                           <children>
+                              <Label text="First Name:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Last Name:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Age:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Phone Number:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="409.0" layoutY="91.0" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+                           <children>
+                              <Label fx:id="fNameLabel1" />
+                              <Label fx:id="lNameLabel1" />
+                              <Label fx:id="ageLabel1" />
+                              <Label fx:id="phoneLabel1" />
+                           </children>
+                        </VBox>
+                        <Button layoutX="507.0" layoutY="314.0" mnemonicParsing="false" onAction="#quit" text="Quit" />
+                        <Label layoutX="364.0" layoutY="27.0" text="Friend Details">
+                           <font>
+                              <Font name="Al Bayan Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Delete a Friend">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="friendsList" layoutX="31.0" layoutY="15.0" onMouseClicked="#deleteFriend" prefHeight="338.0" prefWidth="200.0" />
+                        <VBox alignment="CENTER_RIGHT" layoutX="300.0" layoutY="69.0" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+                           <children>
+                              <Label text="First Name:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Last Name:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Age:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Phone Number:">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="409.0" layoutY="91.0" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+                           <children>
+                              <Label fx:id="fNameLabel" />
+                              <Label fx:id="lNameLabel" />
+                              <Label fx:id="ageLabel" />
+                              <Label fx:id="phoneLabel" />
+                           </children>
+                        </VBox>
+                        <Button layoutX="507.0" layoutY="314.0" mnemonicParsing="false" onAction="#quit" text="Quit" />
+                        <Label layoutX="323.0" layoutY="27.0" text="Select a Friend to delete">
+                           <font>
+                              <Font name="Al Bayan Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="confirmDeletion" layoutX="256.0" layoutY="315.0" mnemonicParsing="false" onAction="#confirmDeletion" text="Delete Friend" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
